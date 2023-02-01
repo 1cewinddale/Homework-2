@@ -92,7 +92,7 @@ public class Main {
         short WeightLoose = 7;
         double WeightLooseInGrams = (WeightLoose/0.001);
         short WeightLooseMin = 250;
-        short WeghtLooseMax = 500;
+        short WeightLooseMax = 500;
         short DaysForWeightLoose250 = 7000 / 250;
         short DaysForWeightLoose500 = 7000 / 500;
         int DaysToLooseToAverage =(DaysForWeightLoose250+DaysForWeightLoose500)/2;
@@ -102,25 +102,17 @@ public class Main {
     }
     public static void task8() {
         System.out.println("Задача 8");
-        byte SalaryincreasesPrecent = 10;
         int Mari = 67760;
         int Den = 83690;
         int Kristy = 76230;
-        int SalaryPerYearMari = (67760 * 12);
-        int SalaryPerYearDen = (83690 * 12);
-        int SalaryPerYearKristy = (76230 * 12);
-        double SalaryPerMonthMari = (67760 * 0.1);
-        double SalaryPerMonthDen = (83690 * 0.1);
-        double SalaryPerMonthKristy = (76230 * 0.1);
-        double IncreasesSalaryPerYearMari = (67760 * 12) * 0.1;
-        double IncreasesSalaryPerYearDen = (83690 * 12) * 0.1;
-        double IncreasesSalaryPerYearKristy = (76230 * 12) * 0.1;
-        System.out.println(SalaryPerYearMari);
-        System.out.println(IncreasesSalaryPerYearMari);
-        System.out.println(SalaryPerMonthMari);
-
-
-
-
+        float SalaryPerMonthMari = Mari * 1.1f;
+        float SalaryPerMonthDen = Den * 1.1f;
+        float SalaryPerMonthKristy = Kristy * 1.1f;
+        double IncreasesSalaryPerYearMari = (SalaryPerMonthMari * 12) - (Mari * 12);
+        double IncreasesSalaryPerYearDen = (SalaryPerMonthDen * 12) - (Den * 12);
+        double IncreasesSalaryPerYearKristy = (SalaryPerMonthKristy * 12) - (Kristy * 12);
+        System.out.println("Маша теперь получает "+SalaryPerMonthMari+" рублей. Годовой доход вырос на "+IncreasesSalaryPerYearMari+" рублей");
+        System.out.println("Денис теперь получает "+SalaryPerMonthDen+" рублей. Годовой доход вырос на "+IncreasesSalaryPerYearDen+" рублей");
+        System.out.println("Кристина теперь получает "+SalaryPerMonthKristy+" рублей. Годовой доход вырос на "+IncreasesSalaryPerYearKristy+" рублей");
     }
 }
